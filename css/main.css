@@ -3,3 +3,70 @@
 .hidden {
 	display: none;
 }
+
+.container {
+
+	max-width: 1140px;
+	margin: 0 auto;
+	background-color: rgb(190, 190, 190);
+}
+
+#mediaQuery {
+	color: white;
+	font-size: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.boxClass {
+	height: 500px;
+	margin: 10px;
+}
+
+#box1 {
+	background-color: pink;
+	flex-grow: 1;
+}
+
+#box2 {
+	background-color: red;
+	flex-grow: 1;
+}
+
+#box3 {
+	background-color: grey;
+	flex-grow: 1;
+}
+
+#box4 {
+	background-color: brown;
+	flex-grow: 1;
+}
+
+#box3, #box4 {
+	display: none;
+}
+
+@media screen and (min-width: 641px) {
+	#mediaQuery {
+		flex-direction: row;
+	}
+
+	#box1 {
+		background-color: blue;
+	}
+	
+	#box2 {
+		background-color: purple;
+	}
+
+	#box3, #box4 {
+		display: unset;
+	}
+}
+
+@media screen and (max-width: 1140px) {
+	/* here just to display the media query in the inspect portion of Chrome */
+}
